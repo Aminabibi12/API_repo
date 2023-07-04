@@ -1,0 +1,16 @@
+{
+  "name": "api_repo",
+  "version": "1.0.0",
+  "description": "",
+  "type" : "module",
+  "main": "file1.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.6.0"
+  }
+}

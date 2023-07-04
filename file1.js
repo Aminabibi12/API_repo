@@ -1,3 +1,9 @@
+/*onst person = {
+    name : "Amina",
+    age : 32
+}
+export {person};*/
+
 async function fetchData1() {
     let response = await fetch('https://dog.ceo/api/breeds/image/random');
     let data = await response.json();
@@ -5,7 +11,9 @@ async function fetchData1() {
     document.getElementById('image').innerHTML = `<img src = "${data.message}">`;
 }
 
-fetchData1()
+//fetchData1()
+
+
 
 
 async function fetchData2() {
@@ -15,7 +23,7 @@ async function fetchData2() {
     document.getElementById('fact').innerHTML = data.fact;
 }
 
-fetchData2()
+//fetchData2()
 
 async function fetchData3() {
     let response = await fetch('http://universities.hipolabs.com/search?country=United+States');
@@ -26,4 +34,7 @@ async function fetchData3() {
     document.getElementById('list').innerHTML = names.join(',' );
 }
 
-fetchData3()
+//fetchData3()
+
+export {fetchData3};
+
