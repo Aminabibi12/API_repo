@@ -1,40 +1,32 @@
-/*onst person = {
-    name : "Amina",
-    age : 32
-}
-export {person};*/
-
 async function fetchData1() {
+    let response = await fetch('https://catfact.ninja/fact');
+    let data = await response.json();
+    console.log(data);
+    document.getElementById('fact').innerHTML = `<p>Cat Facts : ${data.fact}</p>`;
+}
+
+
+async function fetchData2() {
     let response = await fetch('https://dog.ceo/api/breeds/image/random');
     let data = await response.json();
     console.log(data);
     document.getElementById('image').innerHTML = `<img src = "${data.message}">`;
 }
 
-//fetchData1()
-
-
-
-
-async function fetchData2() {
-    let response = await fetch('https://catfact.ninja/fact');
-    let data = await response.json();
-    console.log(data);
-    document.getElementById('fact').innerHTML = data.fact;
-}
-
-//fetchData2()
 
 async function fetchData3() {
-    let response = await fetch('http://universities.hipolabs.com/search?country=United+States');
+    let response = await fetch('https://api.chucknorris.io/jokes/random');
     let data = await response.json();
     console.log(data);
-
-    let names = data.map(university => university.name);
-    document.getElementById('list').innerHTML = names.join(',' );
+    
+    let jokesElement = document.getElementById('jokes');
+    jokesElement.innerHTML = `<p>Value : ${data.value}</p>`;
+  
 }
 
-//fetchData3()
+ //fetchData1()
+// fetchData2()
+window.myVar = 42
 
-export {fetchData3};
+export {fetchData3, fetchData1, fetchData2};
 
